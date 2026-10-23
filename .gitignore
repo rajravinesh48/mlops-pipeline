@@ -18,3 +18,4 @@ __pycache__/
 mlflow.db
 mlruns/
 mlartifacts/
+.env.monitoring

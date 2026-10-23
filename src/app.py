@@ -130,6 +130,9 @@ app = FastAPI(
     lifespan=lifespan,
 )
 
+from .monitoring import setup_monitoring
+setup_monitoring(app, lambda: model is not None)
+
 
 # Browser navigation uses GET; redirect to interactive Swagger documentation.
 # This route must be declared AFTER app = FastAPI(...).
