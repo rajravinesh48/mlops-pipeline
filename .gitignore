@@ -1,0 +1,12 @@
+venv/
+.venv/
+__pycache__/
+*.pyc
+mlruns/
+mlartifacts/
+mlflow.db
+.env
+.env.*
+!.env.example
+*.pem
+*.key
