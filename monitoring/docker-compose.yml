@@ -4,6 +4,7 @@ services:
     restart: unless-stopped
     ports:
       - "127.0.0.1:9090:9090"
+      - "127.0.0.1:3000:3000"
     extra_hosts:
       - "host.docker.internal:host-gateway"
     command:
@@ -19,8 +20,7 @@ services:
     restart: unless-stopped
     depends_on:
       - prometheus
-    ports:
-      - "127.0.0.1:3000:3000"
+    network_mode: "service:prometheus"
     environment:
       GF_SECURITY_ADMIN_USER: admin
       GF_SECURITY_ADMIN_PASSWORD: ${GRAFANA_ADMIN_PASSWORD:?Generate .env.monitoring and use --env-file}
