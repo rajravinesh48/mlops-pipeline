@@ -10,3 +10,11 @@ mlflow.db
 !.env.example
 *.pem
 *.key
+venv/
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+mlflow.db
+mlruns/
+mlartifacts/
